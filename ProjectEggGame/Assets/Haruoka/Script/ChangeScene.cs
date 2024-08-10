@@ -44,6 +44,16 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
+    //現在のシーンをロードする(リスタートする)
+    public void CurrentLoadScene()
+    {
+        //現在のシーン名を取得
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        //現在のシーンを再ロード
+        SceneManager.LoadScene(currentSceneName);
+    }
+
     //リザルトシーンをロードする
     public void ResultLoadScene(string str)
     {
