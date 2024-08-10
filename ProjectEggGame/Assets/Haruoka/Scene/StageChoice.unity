@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 145362047}
   - component: {fileID: 145362046}
   - component: {fileID: 145362045}
+  - component: {fileID: 145362048}
   m_Layer: 5
   m_Name: Stage_01
   m_TagString: Untagged
@@ -282,7 +283,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 145362046}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 145362048}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: StageLoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stage_01
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &145362046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +334,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145362043}
   m_CullTransparentMesh: 1
+--- !u!114 &145362048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145362043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266cc5ca28e8e974db454855871b78f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &157786510
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +452,7 @@ GameObject:
   - component: {fileID: 316031438}
   - component: {fileID: 316031437}
   - component: {fileID: 316031436}
+  - component: {fileID: 316031439}
   m_Layer: 5
   m_Name: Stage_02
   m_TagString: Untagged
@@ -498,7 +524,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 316031437}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 316031439}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: StageLoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stage_02
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &316031437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +575,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316031434}
   m_CullTransparentMesh: 1
+--- !u!114 &316031439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316031434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266cc5ca28e8e974db454855871b78f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &335172644
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +599,7 @@ GameObject:
   - component: {fileID: 335172648}
   - component: {fileID: 335172647}
   - component: {fileID: 335172646}
+  - component: {fileID: 335172649}
   m_Layer: 5
   m_Name: Stage_03
   m_TagString: Untagged
@@ -620,7 +671,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 335172647}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 335172649}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: StageLoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stage_03
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &335172647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +722,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335172644}
   m_CullTransparentMesh: 1
+--- !u!114 &335172649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335172644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266cc5ca28e8e974db454855871b78f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &378192250
 GameObject:
   m_ObjectHideFlags: 0
