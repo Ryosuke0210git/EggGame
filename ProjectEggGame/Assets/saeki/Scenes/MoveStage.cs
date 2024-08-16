@@ -14,10 +14,10 @@ public class MoveStage : MonoBehaviour
     void Update()
     {
         // 前後の傾き (Wキーで前に、Sキーで後ろに傾ける)
-        float tiltForwardBackward = Input.GetAxis("Vertical") * tiltSpeed * Time.deltaTime;
+        float tiltForwardBackward = -Input.GetAxis("Vertical") * tiltSpeed * Time.deltaTime;
 
         // 左右の傾き (Aキーで左に、Dキーで右に傾ける)
-        float tiltLeftRight = Input.GetAxis("Horizontal") * tiltSpeed * Time.deltaTime;
+        float tiltLeftRight = -Input.GetAxis("Horizontal") * tiltSpeed * Time.deltaTime;
 
         // 新しい傾き角度を計算
         tiltX = Mathf.Clamp(tiltX - tiltForwardBackward, -maxTiltAngle, maxTiltAngle);
