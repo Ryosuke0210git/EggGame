@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Haruoka/Scene/Title.unity
+    guid: ec3e2fc6bfd90e144bf53b900a73ce7b
+  - enabled: 1
+    path: Assets/Haruoka/Scene/StageChoice.unity
+    guid: e4bd7da3bd34f0e42b63798daa042cae
+  - enabled: 1
+    path: Assets/Haruoka/Scene/Stage/Stage_01.unity
+    guid: 5ed5a6e3d1acd724ca647e9f8614c9ad
+  - enabled: 1
+    path: Assets/Haruoka/Scene/Stage/Stage_02.unity
+    guid: a98e5f9278e96fd45b7174c8bd80aefa
+  - enabled: 1
+    path: Assets/Haruoka/Scene/Stage/Stage_03.unity
+    guid: 3cb64ad4ffdc1a24eaf9bf242f04d0b4
+  - enabled: 1
+    path: Assets/Haruoka/Scene/Tutorial.unity
+    guid: 74420a8fa18480b419a91858ba847a8b
+  - enabled: 1
+    path: Assets/Haruoka/Scene/Result.unity
+    guid: bba34c80e981fe74daf0781e2e4489ef
   m_configObjects: {}
