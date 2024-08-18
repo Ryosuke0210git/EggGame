@@ -6,7 +6,7 @@ public class MenuController : MonoBehaviour
 {
     public static MenuController instance;
 
-    [SerializeField] GameObject MenuObject; //メニュー画面のUIを割り当てる用の変数
+    [SerializeField] GameObject MenuObject;     //メニュー画面のUIを割り当てる用の変数
 
     public bool MenuFlag;   //メニュー画面の表示・非表示のフラグ
 
@@ -22,6 +22,7 @@ public class MenuController : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(Time.timeScale);
         //メニュー画面が非表示ならば
         if(MenuFlag == false)
         { 
@@ -29,6 +30,8 @@ public class MenuController : MonoBehaviour
             {
                 MenuObject.gameObject.SetActive(true);  //メニュー画面表示
                 MenuFlag = true;
+                Time.timeScale = 0;                     //ポーズ
+               
             }
         }
         else
@@ -37,6 +40,7 @@ public class MenuController : MonoBehaviour
             {
                 MenuObject.gameObject.SetActive(false); //メニュー画面非表示
                 MenuFlag = false;
+                Time.timeScale = 1;                     //ポーズ
             }
         }
     }
@@ -44,14 +48,16 @@ public class MenuController : MonoBehaviour
     //"StartMenuButton"に割り当てている関数
     public void Start_Menu()
     {
-        MenuFlag = true;
         MenuObject.gameObject.SetActive(true);          //メニュー画面表示
+        MenuFlag = true;
+        Time.timeScale = 0;                             //ポーズ
     }
 
     //"EndMenuButton"に割り当てている関数
     public void End_Menu()
     {
-        MenuFlag = false;
         MenuObject.gameObject.SetActive(false);         //メニュー画面非表示
+        MenuFlag = false;
+        Time.timeScale = 1;                             //ポーズ
     }
 }
