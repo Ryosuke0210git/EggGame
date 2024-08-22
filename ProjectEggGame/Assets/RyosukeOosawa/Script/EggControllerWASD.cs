@@ -43,6 +43,13 @@ public class EggControllerWASD : MonoBehaviour
             movement.x += 1;
         }
 
+
+        if (Input.GetKey(KeyCode.U))
+        {
+            rb.AddForce(transform.forward * 30.0f, ForceMode.Force);
+        }
+
+
         // ç≈ëÂë¨ìxÇêßå¿
         if (rb.velocity.magnitude < maxSpeed)
         {

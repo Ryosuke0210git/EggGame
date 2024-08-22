@@ -12,9 +12,16 @@ public class RedHammerSwing : MonoBehaviour
     [Header("戻る速度")]
     public float returnSpeed = 1.0f;
 
+    // AudioSourceコンポーネントを取得
+    AudioSource[] sounds;
+
     private bool PushFg = false;    // ボタンが押されたかどうか
     private bool ReturnFg = false;  // 戻るかどうか
 
+    void Start()
+    {
+        sounds = this.GetComponents<AudioSource>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return)) // エンターキーを押す
@@ -23,6 +30,7 @@ public class RedHammerSwing : MonoBehaviour
             if (!PushFg)
             {
                 PushFg = true;
+                sounds[0].Play();
             }
         }
 
@@ -50,6 +58,7 @@ public class RedHammerSwing : MonoBehaviour
             {
                 ReturnFg = true;
                 localAngle.z = 90;
+                sounds[1].Play();
             }
         }
         else
