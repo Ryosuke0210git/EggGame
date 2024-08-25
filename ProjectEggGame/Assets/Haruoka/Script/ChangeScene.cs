@@ -10,6 +10,7 @@ public class ChangeScene : MonoBehaviour
     //タイトルシーンをロードする
     public void TitleLoadScene(string str)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(str);    //シーンを読み込む
     }
 
@@ -28,6 +29,7 @@ public class ChangeScene : MonoBehaviour
     //ステージシーンをロードする
     public void StageLoadScene(string str)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(str);    //シーンを読み込む
     }
     
@@ -49,6 +51,8 @@ public class ChangeScene : MonoBehaviour
     {
         //現在のシーン名を取得
         string currentSceneName = SceneManager.GetActiveScene().name;
+
+        Time.timeScale = 1;
 
         //現在のシーンを再ロード
         SceneManager.LoadScene(currentSceneName);
