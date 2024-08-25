@@ -11,10 +11,14 @@ public class EggCollision : MonoBehaviour
     public float friction = 0.5f;   // 摩擦
     private Rigidbody rb;
 
+    // AudioSourceコンポーネントを取得
+    AudioSource[] sounds;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+        sounds = this.GetComponents<AudioSource>();
+
         // Rigidbodyの設定
         rb.drag = friction; // 空気抵抗
         rb.angularDrag = friction; // 回転抵抗
@@ -25,6 +29,9 @@ public class EggCollision : MonoBehaviour
         // 衝突したオブジェクトが他の卵であるか確認
         if (collision.gameObject.CompareTag("Egg"))
         {
+            // 衝突音
+            sounds[0].Play();
+
             // 衝突の情報を取得
             Rigidbody otherRb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 relativeVelocity = rb.velocity - otherRb.velocity;

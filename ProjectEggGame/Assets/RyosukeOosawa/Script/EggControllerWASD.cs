@@ -19,9 +19,6 @@ public class EggControllerWASD : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();  // Rigidbody‚ğæ“¾
-        rb.mass = 1f;                    // —‘‚Ì¿—Ê‚ğİ’è
-        rb.drag = 0.5f;                  // ‹ó‹C’ïR‚ğİ’è
-        rb.angularDrag = 0.5f;           // ‰ñ“]’ïR‚ğİ’è
     }
 
     void Update()
@@ -45,6 +42,13 @@ public class EggControllerWASD : MonoBehaviour
         {
             movement.x += 1;
         }
+
+
+        if (Input.GetKey(KeyCode.U))
+        {
+            rb.AddForce(transform.forward * 30.0f, ForceMode.Force);
+        }
+
 
         // Å‘å‘¬“x‚ğ§ŒÀ
         if (rb.velocity.magnitude < maxSpeed)
