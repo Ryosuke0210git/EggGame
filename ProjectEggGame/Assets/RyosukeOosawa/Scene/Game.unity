@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 107208968}
   - component: {fileID: 107208967}
   - component: {fileID: 107208970}
+  - component: {fileID: 107208971}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -417,6 +418,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &107208971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107208966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0858be1a8c8cdf4399520dd91af620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 1.4
+  firstPosition: {x: 0, y: 77.62, z: -77}
+  finalPosition: {x: 0, y: 55.1, z: -31.1}
 --- !u!1 &185545413
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e76ca2715a7484b9a44ae0dbe00a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameEnd: 0
+  WinPlayer: 1
 --- !u!114 &462372617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,6 +1216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e76ca2715a7484b9a44ae0dbe00a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameEnd: 0
+  WinPlayer: 1
 --- !u!114 &598785835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,6 +1698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e76ca2715a7484b9a44ae0dbe00a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameEnd: 0
+  WinPlayer: 1
 --- !u!114 &637219989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4179,6 +4201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e76ca2715a7484b9a44ae0dbe00a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameEnd: 0
+  WinPlayer: 1
 --- !u!65 &1970104278
 BoxCollider:
   m_ObjectHideFlags: 0

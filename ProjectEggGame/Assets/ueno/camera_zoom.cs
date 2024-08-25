@@ -3,20 +3,29 @@ using UnityEngine;  // Unityの基本的な機能を使用するための名前空間
 
 public class camera_zoom : MonoBehaviour  // CameraZoomクラスはMonoBehaviourを継承
 {
-    Transform camera;  // カメラのTransformを格納する変数
-    Camera cam;  // カメラのCameraを格納する変数
+    public float zoomSpeed = 1.0f;  // ズームの速度を格納する変数
 
-    void Start()  // ゲーム開始時に一度だけ実行されるメソッド
+    public Vector3 firstPosition;  // カメラの初期位置を格納する変数
+
+    public Vector3 finalPosition;  // ズーム後のカメラの位置を格納する変数
+
+    private Camera cam;  // カメラの情報を格納する変数
+
+
+    private void Start()  // ゲーム開始時に一度だけ実行される処理
     {
-        camera = GetComponent<Transform>();  // カメラのTransformを取得
-        cam = this.gameObject.GetComponent<Camera>();  // カメラのCameraを取得
+            cam = Camera.main;  // カメラの情報を取得
+            cam.transform.position = firstPosition;  // カメラの初期位置を取得
+            StartCoroutine(MoveCamera());  // MoveCameraメソッドを実行
     }
 
-    void Update()  // ゲーム実行中に毎フレーム実行されるメソッド
+    private IEnumerator MoveCamera()  // ズームするメソッド
     {
-        if (Input.GetKey(KeyCode.W))  // Wキーが押されたら
+        while(Vector3.Distance(cam.transform.position, finalPosition) > 0.1f)  // カメラの位置が目標位置に近づいている間
         {
-            cam.orthographicSize = cam.orthographicSize - 0.1f;  // カメラのorthographicSizeを0.1減らす(ズームイン)
+            cam.transform.position = Vector3.Lerp(cam.transform.position, finalPosition, zoomSpeed * Time.deltaTime);  // カメラを目標位置に向かって移動
+            yield return null;  // 1フレーム待つ
         }
     }
 }
+
