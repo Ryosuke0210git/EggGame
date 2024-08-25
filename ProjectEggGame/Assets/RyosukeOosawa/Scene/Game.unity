@@ -877,8 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e76ca2715a7484b9a44ae0dbe00a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleObject1: {fileID: 7825561442772269614, guid: d26391019e09dfa44b4698bf059026cb, type: 3}
-  particleObject2: {fileID: 6241403832128557101, guid: d5c408dcbc8938d4fa296eba38a895ff, type: 3}
+  particleObject1: {fileID: 6241403832128557101, guid: d5c408dcbc8938d4fa296eba38a895ff, type: 3}
   GameEnd: 0
   WinPlayer: 1
 --- !u!114 &462372617
@@ -1315,8 +1314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e76ca2715a7484b9a44ae0dbe00a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleObject1: {fileID: 7825561442772269614, guid: d26391019e09dfa44b4698bf059026cb, type: 3}
-  particleObject2: {fileID: 6241403832128557101, guid: d5c408dcbc8938d4fa296eba38a895ff, type: 3}
+  particleObject1: {fileID: 6241403832128557101, guid: d5c408dcbc8938d4fa296eba38a895ff, type: 3}
   GameEnd: 0
   WinPlayer: 1
 --- !u!114 &598785835
@@ -1800,8 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e76ca2715a7484b9a44ae0dbe00a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleObject1: {fileID: 7825561442772269614, guid: d26391019e09dfa44b4698bf059026cb, type: 3}
-  particleObject2: {fileID: 6241403832128557101, guid: d5c408dcbc8938d4fa296eba38a895ff, type: 3}
+  particleObject1: {fileID: 6241403832128557101, guid: d5c408dcbc8938d4fa296eba38a895ff, type: 3}
   GameEnd: 0
   WinPlayer: 1
 --- !u!114 &637219989
@@ -2137,7 +2134,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: aa38f911e43ab2744b3ea9c2a4e67cb2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4643,8 +4640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e76ca2715a7484b9a44ae0dbe00a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleObject1: {fileID: 7825561442772269614, guid: d26391019e09dfa44b4698bf059026cb, type: 3}
-  particleObject2: {fileID: 6241403832128557101, guid: d5c408dcbc8938d4fa296eba38a895ff, type: 3}
+  particleObject1: {fileID: 6241403832128557101, guid: d5c408dcbc8938d4fa296eba38a895ff, type: 3}
   GameEnd: 0
   WinPlayer: 1
 --- !u!65 &1970104278

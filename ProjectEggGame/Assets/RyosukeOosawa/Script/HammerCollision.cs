@@ -6,14 +6,12 @@ public class HammerCollision : MonoBehaviour
 {
     [Header("再生するパーティクル1")]
     public GameObject particleObject1;
-    [Header("再生するパーティクル2")]
-    public GameObject particleObject2;
 
     public bool GameEnd = false;  //ゲーム終了を判定するフラグ           
     public float WinPlayer = 1;   //どちらのプレイヤーが勝ったかを判定するフラグ
 
     // オフセットのベクトルを定義します（ローカル座標系でのオフセット）
-    Vector3 localOffset = new Vector3(-7.0f, 17.0f, 0.0f);
+    Vector3 localOffset = new Vector3(-18.0f, 8.0f, 0.0f);
 
     void OnCollisionEnter(Collision collision)
     {
@@ -31,17 +29,16 @@ public class HammerCollision : MonoBehaviour
 
             // 新しい座標と回転でパーティクルオブジェクトを生成します
             Instantiate(particleObject1, newPosition, rotation);
-            Instantiate(particleObject2, newPosition, rotation);
 
-            // 衝突したオブジェクトの名前がPlayer1_Eggの場合
-            if (collision.gameObject.name == "Player1_Egg")
-            {
-                WinPlayer = 1;
-            }
-            else
-            {
-                WinPlayer = 2;
-            }
+            //// 衝突したオブジェクトの名前がPlayer1_Eggの場合
+            //if (collision.gameObject.name == "Player1_Egg")
+            //{
+            //    WinPlayer = 1;
+            //}
+            //else
+            //{
+            //    WinPlayer = 2;
+            //}
 
             // プレイヤーオブジェクトを破壊
             Destroy(collision.gameObject);
