@@ -24,24 +24,33 @@ public class EggControllerArrow : MonoBehaviour
 
     void Update()
     {
+   
+    }
+
+    void FixedUpdate()
+    {
         Vector3 movement = new Vector3();
 
-        // 矢印キーの入力を取得
-        if (Input.GetKey(KeyCode.UpArrow))
+        // ゲームが終了していない場合
+        if (HammerCollision.GameEnd == false)
         {
-            movement.z += 1;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            movement.z -= 1;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            movement.x -= 1;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            movement.x += 1;
+            // 矢印キーの入力を取得
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                movement.z += 1;
+            }
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                movement.z -= 1;
+            }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                movement.x -= 1;
+            }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                movement.x += 1;
+            }
         }
 
         // 最大速度を制限

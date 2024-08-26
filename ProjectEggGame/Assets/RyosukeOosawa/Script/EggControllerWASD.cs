@@ -23,32 +23,34 @@ public class EggControllerWASD : MonoBehaviour
 
     void Update()
     {
+
+    }
+
+    void FixedUpdate()
+    {
         Vector3 movement = new Vector3();
 
-        // WASDキーの入力を取得
-        if (Input.GetKey(KeyCode.W))
+        // ゲームが終了していない場合
+        if (HammerCollision.GameEnd == false)
         {
-            movement.z += 1;
+            // WASDキーの入力を取得
+            if (Input.GetKey(KeyCode.W))
+            {
+                movement.z += 1;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                movement.z -= 1;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                movement.x -= 1;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                movement.x += 1;
+            }
         }
-        if (Input.GetKey(KeyCode.S))
-        {
-            movement.z -= 1;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            movement.x -= 1;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            movement.x += 1;
-        }
-
-
-        if (Input.GetKey(KeyCode.U))
-        {
-            rb.AddForce(transform.forward * 30.0f, ForceMode.Force);
-        }
-
 
         // 最大速度を制限
         if (rb.velocity.magnitude < maxSpeed)

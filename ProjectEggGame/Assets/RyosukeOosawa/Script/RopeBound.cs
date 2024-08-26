@@ -22,6 +22,14 @@ public class RopeBound : MonoBehaviour
     [Header("Y方向の最大値")]
     public float yMax = 10f;
 
+    // AudioSourceコンポーネントを取得
+    AudioSource[] sounds;
+
+    void Start()
+    {
+        sounds = this.GetComponents<AudioSource>();
+    }
+
     void Update()
     {
         Vector3 pos = transform.position;
@@ -42,6 +50,8 @@ public class RopeBound : MonoBehaviour
         // ロープに当たったら
         if (collision.gameObject.CompareTag("Rope"))
         {
+            sounds[1].Play();
+
             // 衝突した位置での法線を取得
             Vector3 bounceDirection = collision.contacts[0].normal;
 

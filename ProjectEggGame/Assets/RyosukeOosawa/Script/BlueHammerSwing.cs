@@ -29,17 +29,26 @@ public class BlueHammerSwing : MonoBehaviour
     }
 
     void Update()
-    { 
-        if (Input.GetKeyDown(KeyCode.Space)) // スペースキーを押す
+    {
+        // ゲームが終了していない場合
+        if (HammerCollision.GameEnd == false)
         {
-            // ボタンが押されていなければ
-            if(!PushFg)
+            if (Input.GetKeyDown(KeyCode.Space)) // スペースキーを押す
             {
-                PushFg = true;
-                sounds[0].Play();
+                // ボタンが押されていなければ
+                if (!PushFg)
+                {
+                    PushFg = true;
+                    sounds[0].Play();
+                }
             }
         }
 
+       
+    }
+
+    void FixedUpdate()
+    {
         // ハンマーを振り下ろす
         if (PushFg)
         {

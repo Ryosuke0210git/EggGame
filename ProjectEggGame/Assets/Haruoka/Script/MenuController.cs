@@ -22,7 +22,6 @@ public class MenuController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(Time.timeScale);
         //メニュー画面が非表示ならば
         if(MenuFlag == false)
         { 
@@ -30,8 +29,7 @@ public class MenuController : MonoBehaviour
             {
                 MenuObject.gameObject.SetActive(true);  //メニュー画面表示
                 MenuFlag = true;
-                Time.timeScale = 0;                     //ポーズ
-               
+                Time.timeScale = 0;                     //ポーズ              
             }
         }
         else
