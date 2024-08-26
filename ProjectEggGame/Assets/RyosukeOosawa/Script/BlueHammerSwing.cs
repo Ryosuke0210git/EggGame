@@ -42,9 +42,7 @@ public class BlueHammerSwing : MonoBehaviour
                     sounds[0].Play();
                 }
             }
-        }
-
-       
+        }      
     }
 
     void FixedUpdate()

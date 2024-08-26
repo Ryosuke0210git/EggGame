@@ -79,13 +79,11 @@ public class HammerCollision : MonoBehaviour
     {
         // ゴングの音
         sounds[3].Play();
-
         StartCoroutine(FadeOutAndLoadScene());
     }
 
     public IEnumerator FadeOutAndLoadScene()
     {
-        GameEnd = false;                          // ゲーム終了フラグをリセット
         fadePanel.enabled = true;                 // パネルを有効化
         float elapsedTime = 0.0f;                 // 経過時間を初期化
         Color startColor = fadePanel.color;       // フェードパネルの開始色を取得
@@ -100,6 +98,7 @@ public class HammerCollision : MonoBehaviour
             yield return null;                                     // 1フレーム待機
         }
         fadePanel.color = endColor;               // フェードが完了したら最終色に設定
+        GameEnd = false;                          // ゲーム終了フラグをリセット
         SceneManager.LoadScene("Result");         //シーンを読み込む
     }
 }
